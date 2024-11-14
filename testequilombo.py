@@ -3,6 +3,7 @@ import pandas as pd
 
 st.title('Localização das comunidades quilombolas (2022)')
 df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv')
+df = df.sort_values(by=['NM_UF'], ascending=True)
 df.drop(columns=['Unnamed: 0'], inplace=True)
 list = ['Lat_d', 'Long_d']
 # convertendo para numeros
